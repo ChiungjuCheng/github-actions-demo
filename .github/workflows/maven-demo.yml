@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -16,3 +17,8 @@ jobs:
           cache: maven
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
+      - name: copy artifacts to staging
+        uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: staging
