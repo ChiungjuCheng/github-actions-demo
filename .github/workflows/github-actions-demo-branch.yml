@@ -1,6 +1,9 @@
 name: GitHub Actions Demo Branch
 run-name: ${{ github.actor }} is testing out GitHub Actions - branch!🚀
-on: [push]
+on:
+  push:
+    branches:
+      - p/*
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
