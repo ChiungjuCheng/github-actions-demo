@@ -2,8 +2,7 @@ name: CRON Schedule
 
 on:
   schedule:
-    # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '0 0/5 21 * * ?'
+    - cron: '5 * * * *'
 jobs:
   build:
     name: Trigger Site Rebuild
