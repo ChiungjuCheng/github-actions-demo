@@ -4,8 +4,7 @@ on:
   schedule:
     - cron: '0/5 * * * *'
 jobs:
-  build:
-    name: Trigger Site Rebuild
+  schedule-job:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
