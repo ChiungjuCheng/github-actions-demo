@@ -2,7 +2,7 @@ name: CRON Schedule
 
 on:
   schedule:
-    - cron: '5 * * * *'
+    - cron: '1 * * * *'
 jobs:
   build:
     name: Trigger Site Rebuild
